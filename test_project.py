@@ -149,10 +149,7 @@ class TestStudentResultManager(unittest.TestCase):
         with patch("builtins.input", return_value="020"):
             with redirect_stdout(output):
                 self.manager.show_result()
-;'
-'
         self.assertIn("CGPA: 3.94", output.getvalue())
-
     # Test 10: Show Result Sheet Testing
     def test_show_result_sheet(self):
         self.manager.students["020"] = Student("020", "Megha")
